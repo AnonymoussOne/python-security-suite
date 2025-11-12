@@ -73,7 +73,7 @@ wpscan \--update
 ## **🚀 Getting Started**
 
 1. **Clone the repository:**  
-   git clone \[https://github.com/your-username/auto-mate.git\](https://github.com/your-username/auto-mate.git)  
+   git clone \[https://github.com/AnonymoussOne/python-security-suite.git](https://github.com/AnonymoussOne/python-security-suite.git)  
    cd auto-mate
 
 2. Install Python dependencies:  

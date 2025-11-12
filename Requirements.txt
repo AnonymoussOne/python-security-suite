@@ -1,0 +1,4 @@
+﻿colorama
+flask
+Jinja2
+psutil

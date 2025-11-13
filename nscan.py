@@ -43,7 +43,9 @@ GUI_PORT = 5001
 LOG_FILE = Path.home() / "auto-mate.log"
 
 # --- ASCII Banner ---
-BANNER = f"""{Fore.CYAN}
+# By adding the 'r' (rf"""), we tell Python to treat backslashes as
+# literal characters, fixing the SyntaxWarning.
+BANNER = rf"""{Fore.CYAN}
     __ _  _ __  | |  _ __  | |  __ _  ___  ___
    / _` || '_ \ | | | '_ \ | | / _` |/ __|/ __|
   | (_| || |_) || | | |_) || || (_| |\\__ \\__ \\
@@ -1081,7 +1083,7 @@ GUI_HTML_TEMPLATE = """
 
         <div id="loading"><div class="spinner"></div><p>Running scan...</p></div>
         
-        <div class="results" id="results-container" style="display:none;">
+        <div classs="results" id="results-container" style="display:none;">
             <h2>Results</h2>
             <pre id="results-output"></pre>
         </div>
@@ -1406,7 +1408,7 @@ def main():
                 import traceback
                 f.write(f"\n--- UNEXPECTED ERROR: {datetime.now()} ---\n")
                 traceback.print_exc(file=f)
-            c_warn(f"Full error details logged to {LOG_File}")
+            c_warn(f"Full error details logged to {LOG_FILE}")
 
 
 if __name__ == "__main__":
